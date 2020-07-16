@@ -2,24 +2,16 @@
 //  IAFullscreenUnitController.h
 //  IASDKCore
 //
-//  Created by Inneractive on 14/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 14/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "IAInterfaceBuilder.h"
-#import "IAUnitController.h"
-#import "IAUnitDelegate.h"
-
-/* // TODO: there is no need in subprotocol, remove it;
-@protocol IAFullscreenUnitControllerDelegate <IAUnitDelegate>
-
-@optional
-
-@end
- */
+#import <IASDKCore/IAInterfaceBuilder.h>
+#import <IASDKCore/IAUnitController.h>
+#import <IASDKCore/IAUnitDelegate.h>
 
 @protocol IAFullscreenUnitControllerBuilder <IAUnitControllerBuilderProtocol>
 
@@ -39,6 +31,11 @@
  * must be implemented.
  */
 - (void)showAdAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
+
+/**
+ *  @brief Tells whether a creative is presented.
+ */
+- (BOOL)isPresented;
 
 - (void)removeAd;
 

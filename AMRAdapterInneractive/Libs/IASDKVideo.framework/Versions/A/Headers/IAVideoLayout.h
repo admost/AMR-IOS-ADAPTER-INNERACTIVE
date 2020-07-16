@@ -2,8 +2,8 @@
 //  IAVideoLayout.h
 //  IASDKVideo
 //
-//  Created by Inneractive on 05/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 05/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -40,15 +40,11 @@ typedef NS_ENUM(NSUInteger, IAVideoClickActionType) {
  * Default: <b>enabled</b>.
  *
  * If disabled, <b>will not be visible</b> in feed.
- *
- * If enabled <b>and</b> CTA native asset is implemented in UI, will be <b>hidden</b> in feed, in order to prevent from showing both CTAs (VAST and OpenRTB).
- *
- * If enabled <b>and</b> CTA native asset is NOT implemented in UI, will be <b>visible</b>.
  */
 @property (nonatomic, getter=isActionButtonVisibleInFeed) BOOL actionButtonIsVisibleInFeed;
 
 /**
- *  @brief Defines whether progress bar is visible in feed (native and non-fullscreen mode).
+ *  @brief Defines whether progress bar is visible in feed (non-fullscreen mode).
  */
 @property (nonatomic, getter=isProgressBarVisibleInFeed) BOOL progressBarIsVisibleInFeed;
 

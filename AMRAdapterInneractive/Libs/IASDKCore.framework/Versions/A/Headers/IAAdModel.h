@@ -2,17 +2,15 @@
 //  IAAdModel.h
 //  IASDKCore
 //
-//  Created by Inneractive on 13/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 13/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "IAInterfaceContentModel.h"
+#import <IASDKCore/IAInterfaceContentModel.h>
 
-// TODO: does it need to be thread safe?
-
-@interface IAAdModel : NSObject
+@interface IAAdModel : NSObject <NSCopying>
 
 @property (nonatomic, readonly, getter=isRewarded) BOOL rewarded;
 

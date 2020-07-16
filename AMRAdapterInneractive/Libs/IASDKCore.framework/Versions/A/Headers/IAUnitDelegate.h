@@ -2,8 +2,8 @@
 //  IAUnitDelegate.h
 //  IASDKCore
 //
-//  Created by Inneractive on 14/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 14/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #ifndef IAUnitDelegate_h
@@ -29,12 +29,22 @@
 - (void)IAAdDidReceiveClick:(IAUnitController * _Nullable)unitController;
 - (void)IAAdWillLogImpression:(IAUnitController * _Nullable)unitController;
 
+/**
+ *  @brief The rewarded units callback for a user reward.
+ *
+ *  @discussion This callback is called for all type of the rewarded content, both HTML/JS and video (VAST/VPAID).
+ */
+- (void)IAAdDidReward:(IAUnitController * _Nullable)unitController;
+#warning in order to use the rewarded callback for all available rewarded content, you will have to implement this method (not the `IAVideoCompleted:`;
+
 - (void)IAUnitControllerWillPresentFullscreen:(IAUnitController * _Nullable)unitController;
 - (void)IAUnitControllerDidPresentFullscreen:(IAUnitController * _Nullable)unitController;
 - (void)IAUnitControllerWillDismissFullscreen:(IAUnitController * _Nullable)unitController;
 - (void)IAUnitControllerDidDismissFullscreen:(IAUnitController * _Nullable)unitController;
 
 - (void)IAUnitControllerWillOpenExternalApp:(IAUnitController * _Nullable)unitController;
+
+- (void)IAAdDidExpire:(IAUnitController * _Nullable)unitController;
 
 @end
 

@@ -2,13 +2,13 @@
 //  IAAdSpot.h
 //  IASDKCore
 //
-//  Created by Inneractive on 13/03/2017.
-//  Copyright © 2017 Inneractive. All rights reserved.
+//  Created by Fyber on 13/03/2017.
+//  Copyright © 2017 Fyber. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "IAInterfaceBuilder.h"
+#import <IASDKCore/IAInterfaceBuilder.h>
 
 @class IAAdRequest;
 @class IAMediation;
@@ -22,7 +22,7 @@ typedef void (^IAAdSpotAdResponseBlock)(IAAdSpot * _Nullable adSpot, IAAdModel *
 @protocol IAAdSpotBuilder <NSObject>
 
 @required
-@property (nonatomic, copy, nonnull) IAAdRequest *adRequest;
+@property (atomic, copy, nonnull) IAAdRequest *adRequest;
 @property (nonatomic, copy, nonnull) IAMediation *mediationType;
 
 - (void)addSupportedUnitController:(IAUnitController * _Nonnull)supportedUnitController;
